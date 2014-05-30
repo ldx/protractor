@@ -47,4 +47,7 @@ echo "  $CONNECT_LOG"
 echo "  $CONNECT_STDOUT"
 echo "  $CONNECT_STDERR"
 sauce-connect/bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -v $ARGS \
+  -k 56aa8e04-155c-4b5c-bcbc-a85547e8d70a -u test \
+  -x http://vilmos.dev.saucelabs.net/rest/v1 --vm-version test \
   --logfile $CONNECT_LOG 2> $CONNECT_STDERR 1> $CONNECT_STDOUT &
+tail -f $CONNECT_STDOUT &
