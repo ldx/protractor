@@ -7,8 +7,8 @@ env:
     - JOB=smoke
     - JOB=suite
   global:
-    - SAUCE_USERNAME=angular-ci
-    - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
+    - SAUCE_USERNAME=test
+    - SAUCE_ACCESS_KEY=56aa8e04-155c-4b5c-bcbc-a85547e8d70a
     - LOGS_DIR=/tmp/protractor-build/logs
     - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
 

@@ -46,7 +46,7 @@ echo "Starting Sauce Connect in the background, logging into:"
 echo "  $CONNECT_LOG"
 echo "  $CONNECT_STDOUT"
 echo "  $CONNECT_STDERR"
-sauce-connect/bin/sc -u test -k 56aa8e04-155c-4b5c-bcbc-a85547e8d70a -v \
+sauce-connect/bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -v \
   -x http://vilmos.dev.saucelabs.net/rest/v1 --vm-version test \
   --logfile $CONNECT_LOG $ARGS 2> $CONNECT_STDERR 1> $CONNECT_STDOUT &
 tail -f $CONNECT_STDOUT &
