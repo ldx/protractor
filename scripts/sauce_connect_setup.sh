@@ -25,7 +25,8 @@ mkdir -p $CONNECT_DIR
 cd $CONNECT_DIR
 curl $CONNECT_URL -o $CONNECT_DOWNLOAD 2> /dev/null 1> /dev/null
 mkdir sauce-connect
-tar --extract --file=$CONNECT_DOWNLOAD --strip-components=1 --directory=sauce-connect > /dev/null
+gunzip $CONNECT_DOWNLOAD
+tar --extract --file=sc-* --strip-components=1 --directory=sauce-connect > /dev/null
 rm $CONNECT_DOWNLOAD
 
 SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
