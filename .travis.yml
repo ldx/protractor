@@ -8,7 +8,7 @@ env:
     - JOB=suite
   global:
     - SAUCE_USERNAME=test
-    - SAUCE_ACCESS_KEY=56aa8e04-155c-4b5c-bcbc-a85547e8d70a
+    - SAUCE_ACCESS_KEY=a07d8e74558a-cbcb-c5b4-c551-40e8aa65
     - LOGS_DIR=/tmp/protractor-build/logs
     - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
 
