@@ -28,7 +28,7 @@ mkdir sauce-connect
 tar --extract --file=$CONNECT_DOWNLOAD --strip-components=1 --directory=sauce-connect > /dev/null
 rm $CONNECT_DOWNLOAD
 
-SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
+#SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
 
 
 ARGS=""
@@ -46,7 +46,6 @@ echo "Starting Sauce Connect in the background, logging into:"
 echo "  $CONNECT_LOG"
 echo "  $CONNECT_STDOUT"
 echo "  $CONNECT_STDERR"
-echo "  Starting SC with $SAUCE_USERNAME:$SAUCE_ACCESS_KEY"
 sauce-connect/bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -v $ARGS \
   -x http://vilmos.dev.saucelabs.net/rest/v1 --vm-version test \
   --logfile $CONNECT_LOG 2> $CONNECT_STDERR 1> $CONNECT_STDOUT &
