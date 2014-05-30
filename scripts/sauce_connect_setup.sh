@@ -14,7 +14,7 @@ set -e
 
 CONNECT_URL="https://d2nkw87yt5k0to.cloudfront.net/downloads/sc-latest-linux.tar.gz"
 CONNECT_DIR="/tmp/sauce-connect-$RANDOM"
-CONNECT_DOWNLOAD="sc-latest-linux.tar.gz"
+CONNECT_DOWNLOAD="sc-4.3-b4-linux.tar.gz"
 
 CONNECT_LOG="$LOGS_DIR/sauce-connect"
 CONNECT_STDOUT="$LOGS_DIR/sauce-connect.stdout"
