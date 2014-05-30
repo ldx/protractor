@@ -14,7 +14,7 @@ set -x
 #   - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
 
 CONNECT_DOWNLOAD="sc-4.3-b4-linux.tar.gz"
-CONNECT_URL="http://saucelabs.com/downloads/$CONNECT_DOWNLOAD-linux.tar.gz"
+CONNECT_URL="http://saucelabs.com/downloads/$CONNECT_DOWNLOAD"
 CONNECT_DIR="/tmp/sauce-connect-$RANDOM"
 
 CONNECT_LOG="$LOGS_DIR/sauce-connect"
