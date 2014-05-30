@@ -23,3 +23,6 @@ script:
 
 after_script:
   - ./scripts/print_logs.sh
+
+after_failure:
+  - sleep 300 && echo "Wait" && sleep 300 && echo "Wait" && sleep 300 && echo "Wait" && sleep 300 && echo "Wait" && sleep 300 && echo "Wait" && sleep 300 && echo "Wait"
