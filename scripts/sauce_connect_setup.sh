@@ -14,7 +14,7 @@ set -x
 #   - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
 
 CONNECT_DOWNLOAD="sc-4.3-b4-linux.tar.gz"
-CONNECT_URL="https://d2nkw87yt5k0to.cloudfront.net/downloads/sc-$CONNECT_DOWNLOAD-linux.tar.gz"
+CONNECT_URL="http://saucelabs.com/downloads/sc-$CONNECT_DOWNLOAD-linux.tar.gz"
 CONNECT_DIR="/tmp/sauce-connect-$RANDOM"
 
 CONNECT_LOG="$LOGS_DIR/sauce-connect"
@@ -26,6 +26,7 @@ mkdir -p $CONNECT_DIR
 cd $CONNECT_DIR
 curl $CONNECT_URL -o $CONNECT_DOWNLOAD 2> /dev/null 1> /dev/null
 mkdir sauce-connect
+file $CONNECT_DOWNLOAD
 tar xvf $CONNECT_DOWNLOAD > /dev/null
 ls -l
 rm $CONNECT_DOWNLOAD
