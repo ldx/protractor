@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e
-set -x
 
 # Setup and start Sauce Connect for your TravisCI build
 # This script requires your .travis.yml to include the following two private env variables:
@@ -49,4 +48,5 @@ echo "  $CONNECT_STDOUT"
 echo "  $CONNECT_STDERR"
 sauce-connect/bin/sc -u test -k 56aa8e04-155c-4b5c-bcbc-a85547e8d70a -v \
   -x http://vilmos.dev.saucelabs.net/rest/v1 --vm-version test \
-  --logfile $CONNECT_LOG $ARGS #2> $CONNECT_STDERR 1> $CONNECT_STDOUT
+  --logfile $CONNECT_LOG $ARGS 2> $CONNECT_STDERR 1> $CONNECT_STDOUT &
+tail -f $CONNECT_STDOUT &
