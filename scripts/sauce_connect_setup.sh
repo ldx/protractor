@@ -26,9 +26,7 @@ mkdir -p $CONNECT_DIR
 cd $CONNECT_DIR
 curl $CONNECT_URL -o $CONNECT_DOWNLOAD 2> /dev/null 1> /dev/null
 mkdir sauce-connect
-file $CONNECT_DOWNLOAD
 tar xvf $CONNECT_DOWNLOAD > /dev/null
-ls -l
 rm $CONNECT_DOWNLOAD
 
 SAUCE_ACCESS_KEY=`echo $SAUCE_ACCESS_KEY | rev`
@@ -51,5 +49,4 @@ echo "  $CONNECT_STDOUT"
 echo "  $CONNECT_STDERR"
 sauce-connect/bin/sc -u test -k 56aa8e04-155c-4b5c-bcbc-a85547e8d70a -v \
   -x http://vilmos.dev.saucelabs.net/rest/v1 --vm-version test \
-  --logfile $CONNECT_LOG $ARGS 2> $CONNECT_STDERR 1> $CONNECT_STDOUT &
-tail -f $CONNECT_STDOUT &
+  --logfile $CONNECT_LOG $ARGS #2> $CONNECT_STDERR 1> $CONNECT_STDOUT
